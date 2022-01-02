@@ -185,6 +185,8 @@ func (sender *Sender) GetRawMessage() interface{} {
 }
 
 func (sender *Sender) IsAdmin() bool {
+	fmt.Println(wxmp.Get("masters"))
+	fmt.Println(sender.uid)
 	return strings.Contains(wxmp.Get("masters"), fmt.Sprint(sender.uid))
 }
 
